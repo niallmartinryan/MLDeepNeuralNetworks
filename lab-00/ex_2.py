@@ -21,13 +21,12 @@ def find_root(f, df, x0):
     x = x0
     while True:
         derivative = df(x)
-        < check if derivative is 0, print a message and return if so >
         if derivative == 0:
             print("Derivative is 0 -- abandoning search!")
             return None
         next_x = x - (f(x)/derivative) 
         print("{} - {}".format(i, x))
-        if math.abs(x - next_x) < 0.0001:
+        if math.fabs(x - next_x) < 0.0001:
             return x
         x = next_x
         i += 1
