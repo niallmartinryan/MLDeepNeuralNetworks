@@ -6,7 +6,7 @@
 # indenting so that it returns 'None' if y is 0, and x/y otherwise.
 
 def safe_div(x, y):
-    if (y == 0)
+    if (y == 0):
         return None
     return x / y
 
@@ -17,7 +17,7 @@ def compute_sum(a, b, c):
 
 # Write a function called 'compute_product' which computes the product
 # of three numbers.
-def compute_product(a, b, c);
+def compute_product(a, b, c):
     return a * b * c
 
 # The code below provides a way to check that the functions defined in
