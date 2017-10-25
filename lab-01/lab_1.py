@@ -27,10 +27,9 @@ def polynomial_design_matrix(x, order=1):
 
     # EXERCISE 1: fill the body of this function.
     # The exponentiation (power) operator in Python is '**'.
-    # for p in range(0, order+1):
-    # for i in range(x.size):
-    # <something>
-
+    for p in range(0, order+1):
+        for i in range(x.size):
+            X[i][p] = x[i] ** p
     return X
 
 
@@ -46,16 +45,23 @@ def linear_regression(X, y, eps=0):
 
     # EXERCISE 2: implement Tikhonov regularisation.
     # See lecture handout 1, slide 35.
-    # print("Eps: " + str(eps))
+    print("Eps: " + str(eps))
     # <add 'eps' times the identity matrix to M>
+    M = M + np.identity(X.shape[1])*eps
     theta = np.dot(np.linalg.inv(M), np.dot(X.transpose(), y))
-    return theta;
+    return theta
 
 # EXERCISE 3: implement computation of mean squared error between two vectors
 def mean_squared_error(y1, y2):
-    return 0  # replace this with your answer.
+    diff_sum = 0
+    for i in range(y1.size):
+        diff = y1[i] - y2[i]
+        sqr = diff**2
+        diff_sum += sqr
+    
+    return diff_sum/y1.size 
 
 # EXERCISE 4: return the number of the best order for the supplied
 # data (see the notebook).
 def question_4():
-    return 0   # replace '0' with your answer.
+    return 2   # replace '0' with your answer.
