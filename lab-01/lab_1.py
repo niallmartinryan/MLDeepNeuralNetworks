@@ -64,4 +64,4 @@ def mean_squared_error(y1, y2):
 # EXERCISE 4: return the number of the best order for the supplied
 # data (see the notebook).
 def question_4():
-    return 2   # replace '0' with your answer.
+    return 3   # replace '0' with your answer.
