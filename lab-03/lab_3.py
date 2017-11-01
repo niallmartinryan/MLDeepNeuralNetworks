@@ -7,7 +7,7 @@ def question_1():
     # Yes, you could try them each in turn..!
     # But don't do that.
     return ""   # Placeholder
-    # return "Nearest Neighbors"
+    return "Nearest Neighbors"
     # return "Logistic Regression"
     # return "Linear SVM"
     # return "RBF SVM"
