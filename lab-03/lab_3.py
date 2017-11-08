@@ -21,9 +21,9 @@ def question_2():
 def question_3():
     # This function returns a single number,
     # corresponding to the answer.
-    return 0.072 # Replace with your answer.
+    return 0.062 # Replace with your answer.
 
 def question_4():
     # This function returns a single number, corresponding to the
     # digit most commonly misclassified.
-    return -1 # Replace with your answer.
+    return 7 # Replace with your answer.
